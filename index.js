@@ -1,22 +1,18 @@
 let choice=['Rock','Paper','Scissor'];
 
-function getComputerChoice(){
-    choice[Math.floor(Math.random()*choice.length)]
-}
-console.log(getComputerChoice())
+let getComputerChoice=choice[(Math.floor(Math.random()*choice.length))];
+console.log(getComputerChoice)
 
-function singleRoad(playerSection, computerSection){
-    return `You loose! ${computerSection}  beats  ${playerSection} `
-}
-const playerSection = prompt('insert your choice betweet Rock,Paper and scissor','');
-const computerSection= getComputerChoice();
-console.log(computerSection)
-console.log(singleRoad(playerSection, computerSection));
+let playerSection = prompt('insert your choice betweet Rock,Paper and scissor','');
 
-// function game(){
-//     for (let i = 0; i < choice.length; i++) {
-//         if (i==choice.length - 1) {
-//             console.log(`${choice[i]}`)
-//         }
-//     }
-// }
+console.log(playerSection)
+
+function Roceturn(){
+    if(playerSection===getComputerChoice){
+        console.log(`You win, ${getComputerChoice} matches ${playerSection} !`);
+    }
+    else{
+        console.log(`You loose!,${getComputerChoice} does'nt match ${playerSection}.`)
+    }
+}
+console.log(Roceturn());
