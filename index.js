@@ -8,11 +8,17 @@ let playerSection = prompt('insert your choice betweet Rock,Paper and scissor','
 console.log(playerSection)
 
 function Roceturn(){
-    if(playerSection===getComputerChoice){
-        console.log(`You win, ${getComputerChoice} matches ${playerSection} !`);
+    if(playerSection===`Rock` && getComputerChoice===`Scissor`){
+        console.log(`You win, ${playerSection} bits ${getComputerChoice} !`);
     }
-    else{
-        console.log(`You loose!,${getComputerChoice} does'nt match ${playerSection}.`)
+    else if(playerSection===`Scissor` && getComputerChoice===`Paper`){
+        console.log(`You win! ${playerSection} bits ${getComputerChoice}`);
+    }else if(playerSection===`Rock` && getComputerChoice===`Paper`){
+        console.log(`You loose! ${getComputerChoice} beats ${playerSection}`);
+    }else if(playerSection===getComputerChoice){
+        console.log(`TIE!, Repeat again the game!`);
+    }else{
+        console.log(`Come on, You have not choosen anything!`);
     }
 }
 console.log(Roceturn());
